@@ -2,3 +2,5 @@ spring:
   security:
     user:
       password: password
+  redis:
+    host: redis

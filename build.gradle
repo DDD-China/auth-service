@@ -1,6 +1,7 @@
 plugins {
     id "org.springframework.boot" version "2.0.6.RELEASE"
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
+    id "com.palantir.docker" version "0.20.1"
 }
 
 apply plugin: 'java'
@@ -22,4 +23,10 @@ dependencies {
     implementation('org.springframework.session:spring-session-data-redis')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation('org.springframework.security:spring-security-test')
+}
+
+docker {
+    name "955065381857.dkr.ecr.cn-north-1.amazonaws.com.cn/auth-service"
+    files jar.archivePath
+    buildArgs(['JAR_FILE': "${jar.archiveName}"])
 }
