@@ -3,6 +3,7 @@ server:
 spring:
   security:
     user:
-      password: password
+      password: 123456
+      name: 13888888888
   redis:
     host: redis

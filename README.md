@@ -1,7 +1,7 @@
 - how to test security protected services:
 
 ```
-$ curl -iuuser:password -d "" http://54.223.95.220:31400/auth
+$ curl -iu13888888888:123456 -d "" http://54.223.95.220:31400/auth
 HTTP/1.1 200 OK
 x-auth-token: 5f31eb56-66ba-4aa6-82e9-171bdbcffbf2
 
